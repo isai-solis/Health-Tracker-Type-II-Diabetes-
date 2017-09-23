@@ -1,0 +1,23 @@
+{
+  "name": "project-x",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isai-solis/Project-X.git"
+  },
+  "author": "Audrey Fletcher, Mark Strelecky, Joshua Summitt, Isai Solis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isai-solis/Project-X/issues"
+  },
+  "homepage": "https://github.com/isai-solis/Project-X#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
