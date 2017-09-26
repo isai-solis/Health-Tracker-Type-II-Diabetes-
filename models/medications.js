@@ -23,11 +23,12 @@ module.exports = function(){
             }
         },
     });
-
+    
     medications.associate = function(models){
         medications.belongsTo(models.userInfo, {
+            as: userName,
             foreignKey: {
-                allowNull: false
+                    allowNull: false
             }
         });
     };

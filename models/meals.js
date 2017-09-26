@@ -16,9 +16,10 @@ module.exports = function(){
 
     meals.associate = function(models){
         meals.belongsTo(models.userInfo, {
-            foreignKey: {
-                allowNull: false
-            }
+            as: userName,
+                foreignKey: {
+                        allowNull: false
+                }
         });
     };
     return meals;

@@ -15,10 +15,13 @@ module.exports = function(){
         }
     });
 
+    
     insulin.associate = function(models){
         insulin.belongsTo(models.userInfo, {
+            as: userName,
             foreignKey: {
-                allowNull: false
+                    allowNull: false
+
             }
         });
     };
