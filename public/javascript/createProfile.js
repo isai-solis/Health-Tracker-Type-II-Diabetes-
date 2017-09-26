@@ -8,8 +8,8 @@ $(document).ready(function(){
     var userName = $("#userName");
     var password = $("#password");
 
-    $(document).on("submit", "#author-form", userFormSubmit);
-    $(document).on("click", ".delete-author", handleDeleteButtonPress);
+    $(document).on("submit", ".signupbtn", userFormSubmit);
+    $(document).on("click", ".deleteUser", handleDeleteButtonPress);
     
         // A function to handle what happens when the form is submitted to create a new Author
     function userFormSubmit(event) {
