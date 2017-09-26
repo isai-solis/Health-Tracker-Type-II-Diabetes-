@@ -19,9 +19,10 @@ var sequelize = require("../config/connection.js");
 
     bloodSugarM.associate = function(models){
         bloodSugarM.belongsTo(models.userInfo, {
-            foreignKey: {
-                allowNull: false
-            }
+            as: userName, 
+                foreignKey: {
+                    allowNull: false
+                }
         });
     };
 

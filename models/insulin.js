@@ -14,5 +14,14 @@ module.exports = function(){
             type: Sequelize.STRING
         }
     });
+    
+    insulin.associate = function(models){
+        insulin.belongsTo(models.userInfo, {
+            as: userName,
+            foreignKey: {
+                    allowNull: false
+            }
+        });
+    };
     return insulin;
 }

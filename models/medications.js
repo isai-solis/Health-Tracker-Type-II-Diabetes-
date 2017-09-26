@@ -26,11 +26,12 @@ module.exports = function(){
             type: Sequelize.FLOAT
         }
     });
-
+    
     medications.associate = function(models){
         medications.belongsTo(models.userInfo, {
+            as: userName,
             foreignKey: {
-                allowNull: false
+                    allowNull: false
             }
         });
     };
