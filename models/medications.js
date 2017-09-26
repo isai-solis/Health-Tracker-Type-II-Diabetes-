@@ -9,8 +9,11 @@ var medications = sequelize.define("medications",{
         type: Sequelize.INTEGER
     },
     dose: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
     },
+    A1CLevels: {
+        type: Sequelize.FLOAT
+    }
 });
 
 medications.sync();

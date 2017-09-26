@@ -9,7 +9,7 @@ var insulin = sequelize.define("insulin",{
         type: Sequelize.INTEGER
     },
     basalQty: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
     },
     basalTime: {
         type: Sequelize.INTEGER
