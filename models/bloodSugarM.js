@@ -1,18 +1,22 @@
 var Sequelize = require("sequelize");
 var sequelize = require("../config/connection.js");
 
-var bloodSugarM = sequelize.define("bloodSuagrM",{
-    mgDl: {
-        type: Sequelize.INTEGER
-    },
-    timeOfM: {
-        type: Sequelize.TIME
-    },
-     validate: {
-        isDate: true
-    },
-});
+ module.exports = function(){
+    var bloodSugarM = sequelize.define("bloodSuagrM",{
+    
+        mgDl: {
+            type: Sequelize.INTEGER
+        },
+        timeOfM: {
+            type: Sequelize.DATETIME,
+            validate: {
+                isDate: true,
+                notNull: true
+            },
+        },
+        
+    });
+    return bloodSugarM;
+}
 
-bloodSugarM.sync();
 
-module.exports = bloodSugarM;
