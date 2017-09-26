@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/isai-solis/Project-X#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.15.4",
     "fs": "0.0.1-security",
     "path": "^0.12.7",
