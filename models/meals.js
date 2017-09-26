@@ -8,6 +8,14 @@ module.exports = function(){
             type: Sequelize.STRING
         }
     });
+
+    meals.associate = function(models){
+        meals.belongsTo(models.userInfo, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
     return meals;
 }
 

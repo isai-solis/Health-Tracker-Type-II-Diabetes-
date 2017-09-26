@@ -21,6 +21,14 @@ module.exports = function(){
         
     });
 
+    activity.associate = function(models){
+        activity.belongsTo(models.userInfo, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
+
     return activity;
 };
 
