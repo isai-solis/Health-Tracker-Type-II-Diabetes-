@@ -6,6 +6,12 @@ module.exports = function(){
         name: {
             type: Sequelize.STRING
         },
+        email: {
+            type: Sequelize.STRING
+        },
+        gender:{
+            type: Sequelize.STRING
+        },
         birthDate: {
             type: Sequelize.DATE
         },
@@ -23,34 +29,26 @@ module.exports = function(){
         }
     });
 
-    userInfo.associate = function(){
+    userInfo.associate = function(models){
         userInfo.hasMany(models.activity, {
             onDelete: "cascade"
         });
-    };
-
-    userInfo.associate = function(models){
         userInfo.hasMany(models.bloodSugarM, {
             onDelete: "cascade"
         });
-    };
-
-    userInfo.associate = function(){
-        userInfo.hasMany(models.insulin, {
+         userInfo.hasMany(models.insulin, {
             onDelete: "cascade"
         });
-    };
-
-    userInfo.associate = function(){
         userInfo.hasMany(models.meals, {
             onDelete: "cascade"
         });
-    };
-
-    userInfo.associate = function(){
-        userInfo.hasMany(models.medications, {
+         userInfo.hasMany(models.medications, {
             onDelete: "cascade"
         });
+         userInfo.hasMany(models.A1C, {
+            onDelete: "cascade"
+        });
+
     };
 
 return userInfo;

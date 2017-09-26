@@ -12,7 +12,7 @@ module.exports = function(){
             type: Sequelize.STRING
         },
         time: {
-            type: Sequelize. DATETIME,
+            type: Sequelize.DATE,
             validate: {
                 notNull: true
             }

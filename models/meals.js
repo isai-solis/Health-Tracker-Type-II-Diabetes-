@@ -4,7 +4,7 @@ var sequelize = require("../config/connection.js");
 module.exports = function(){
     var meals = sequelize.define("meals",{
         time: {
-            type: Sequelize.DATETIME
+            type: Sequelize.DATE
         },
         meal: {
             type: Sequelize.STRING

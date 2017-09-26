@@ -13,12 +13,15 @@ app.use(express.static("public"));
 require("./routes/activity-api-routes.js")(app);
 require("./routes/bloodSugarM-api-routes.js")(app);
 require("./routes/insulin-api-routes.js")(app);
-require("./routes/meals-routes.js")(app);
+require("./routes/meals-api-routes.js")(app);
 require("./routes/medications-api-routes.js")(app);
 require("./routes/userInfo-api-routes.js")(app);
+require("./routes/A1C-api-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
 db.sequelize.sync({ force: true }).then(function() {
-    app.listen(PORT, function() {
-      console.log("Application listening on PORT " + PORT);
-    });
+  app.listen(PORT, function() {
+    console.log("Application listening on PORT " + PORT);
+  });
+
 });

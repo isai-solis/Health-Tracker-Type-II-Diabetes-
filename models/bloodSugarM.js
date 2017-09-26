@@ -2,13 +2,13 @@ var Sequelize = require("sequelize");
 var sequelize = require("../config/connection.js");
 
  module.exports = function(){
-    var bloodSugarM = sequelize.define("bloodSuagrM",{
+    var bloodSugarM = sequelize.define("bloodSugarM",{
     
         mgDl: {
             type: Sequelize.INTEGER
         },
         timeOfM: {
-            type: Sequelize.DATETIME,
+            type: Sequelize.DATE,
             validate: {
                 isDate: true,
                 notNull: true

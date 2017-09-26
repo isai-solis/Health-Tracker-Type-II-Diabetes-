@@ -5,7 +5,7 @@ module.exports = function(){
     var insulin = sequelize.define("insulin",{
         
         time: {
-            type: Sequelize.DATETIME
+            type: Sequelize.DATE
         },
         units: {
             type: Sequelize.FLOAT

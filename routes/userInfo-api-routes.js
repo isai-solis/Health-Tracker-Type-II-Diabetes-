@@ -2,17 +2,19 @@ var db = require("../models");
 
 module.exports = function(app){
 
-     app.post("/api/userInfo", function(req, res){
-      db.userInfo.create({
-        name: req.body.XXXXXX,
-        birthDate: req.body.XXXXXXX,
-        weight: req.body.XXXXXX,
-        height: req.body.XXXXXX,
-        userName: req.body.XXXXXX,
-        password: req.body.XXXXXX,
-      }).then(function(dbuserInfo){
-            res.json(dbuserInfo);
-      });
+    app.post("/api/userInfo", function(req, res){
+        db.userInfo.create({
+            name: req.body.name,
+            birthDate: req.body.birthDate,
+            email: req.body.email,
+            gender: req.body.gender,
+            weight: req.body.weight,
+            height: req.body.height,
+            userName: req.body.userName,
+            password: req.body.password,
+        }).then(function(dbuserInfo){
+                res.json(dbuserInfo);
+        });
     });
 
 
