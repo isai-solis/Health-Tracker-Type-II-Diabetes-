@@ -22,9 +22,6 @@ module.exports = function(){
                 notNull: true
             }
         },
-        A1CLevels: {
-            type: Sequelize.FLOAT
-        }
     });
 
     medications.associate = function(models){
