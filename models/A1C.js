@@ -1,13 +1,10 @@
-var Sequelize = require("sequelize");
-var sequelize = require("../config/connection.js");
-
-module.exports = function(){
+module.exports = function(sequelize, DataTypes){
     var A1C = sequelize.define("A1C",{
         level: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         time: {
-            type: Sequelize. DATETIME,
+            type: DataTypes.DATE,
             validate: {
                 notNull: true
             }
@@ -16,6 +13,7 @@ module.exports = function(){
 
     A1C.associate = function(models){
         A1C.belongsTo(models.userInfo, {
+            as: models.userInfo.userName,
             foreignKey: {
                 allowNull: false
             }
