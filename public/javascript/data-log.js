@@ -4,7 +4,6 @@ $("#query-submit").on("click", function(){
 	event.preventDefault();
 
 		console.log = $("#time-frame").val()
-		
 	var querySubmit = {
 		user: user,
 		dataType: $("#data-type").val(),
