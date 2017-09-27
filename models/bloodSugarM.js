@@ -1,14 +1,11 @@
-var Sequelize = require("sequelize");
-var sequelize = require("../config/connection.js");
-
- module.exports = function(){
+module.exports = function(sequelize, DataTypes){
     var bloodSugarM = sequelize.define("bloodSugarM",{
     
         mgDl: {
-            type: Sequelize.INTEGER
+            type: DataTypes.INTEGER
         },
         timeOfM: {
-            type: Sequelize.DATE,
+            type: DataTypes.DATE,
             validate: {
                 isDate: true,
                 notNull: true
@@ -19,7 +16,7 @@ var sequelize = require("../config/connection.js");
 
     bloodSugarM.associate = function(models){
         bloodSugarM.belongsTo(models.userInfo, {
-            as: userName, 
+             as: models.userInfo.userName, 
                 foreignKey: {
                     allowNull: false
                 }

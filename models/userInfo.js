@@ -1,31 +1,28 @@
-var Sequelize = require("sequelize");
-var sequelize = require("../config/connection.js");
-
-module.exports = function(){
+module.exports = function(sequelize, DataTypes){
     var userInfo = sequelize.define("userInfo",{
         name: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         email: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         gender:{
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         birthDate: {
-            type: Sequelize.DATE
+            type: DataTypes.DATE
         },
         weight: {
-            type: Sequelize.INTEGER
+            type: DataTypes.INTEGER
         },
         height: {
-            type: Sequelize.INTEGER
+            type: DataTypes.INTEGER
         },
         userName: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         password: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         }
     });
 
