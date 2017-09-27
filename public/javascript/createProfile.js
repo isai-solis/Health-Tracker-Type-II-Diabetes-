@@ -6,8 +6,6 @@ $("#submitBtn").on("click", function(){
    console.log(userName);
     
     
-    
-    
     // var name = "";
     // var birthDate = "";
     // var email = "";
