@@ -12,30 +12,32 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="log-display">
-	<div id="query-bar">
-			<form>
-			  <select id="data-type">
-			  	<option value="all">All</option>
-				  <option value="meals">Food</option>
-				  <option value="bloodSugarM">Blood Sugar</option>
-				  <option value="insulin">Insulin</option>
-				  <option value="activity">Activity</option>
-				</select>
-				<select id="time-frame">
-				  <option value="24">Last 24 Hrs</option>
-				  <option value="48">Last 48 Hrs</option>
-				  <option value="week">Last Week</option>
-				  <option value="month">Last Month</option>
-				  <option value="allTime">Last Year</option>
-				</select>
-				<button id ="query-submit">Submit Query<button>
-			</form>
-		<div id="data-display">
+	<form>
+		<div id="log-display">
+			<div id="query-bar">
+					<form>
+					  <select id="data-type">
+					  	<option value="all">All</option>
+						  <option value="meals">Food</option>
+						  <option value="bloodSugarM">Blood Sugar</option>
+						  <option value="insulin">Insulin</option>
+						  <option value="activity">Activity</option>
+						</select>
+						<select id="time-frame">
+						  <option value="24">Last 24 Hrs</option>
+						  <option value="48">Last 48 Hrs</option>
+						  <option value="week">Last Week</option>
+						  <option value="month">Last Month</option>
+						  <option value="allTime">Last Year</option>
+						</select>
+						<button id ="query-submit">Submit Query</button>
+					</form>
+				<div id="data-display">
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
+	</form>	
 
-<script type="text/javascript" src="javascript/data-log.js"></script>
+	<script type="text/javascript" src="javascript/data-log.js"></script>
 </body>
 </html>
