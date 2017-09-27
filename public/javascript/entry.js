@@ -1,9 +1,15 @@
 var user = sessionStorage.getItem('userName');
+<<<<<<< HEAD
 
 if (user == null){
 	console.log("you messed up");
 
 }
+=======
+// if (user == null){
+// 	redirect("/loginauth");
+// }
+>>>>>>> origin
 console.log("user = " + user);
 
 //buttons for displaying each type of entry form
@@ -112,7 +118,7 @@ $("#activity-submit").on("click", function(){
 		userName: user,
 		activity: $("#activity").val(),
 		mood: $("#mood").val(),
-		duration: $("#duration").val(),
+		duration: $("#duration").val(), 
 		time: $("#activity-time").val()
 	}
 	console.log(dataSubmit);
