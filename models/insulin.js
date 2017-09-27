@@ -1,27 +1,29 @@
 var Sequelize = require("sequelize");
 var sequelize = require("../config/connection.js");
 
-var insulin = sequelize.define("insulin",{
-    id: {
-        type: Sequelize.INTEGER
-    },
-    basalFreq: {
-        type: Sequelize.INTEGER
-    },
-    basalQty: {
-        type: Sequelize.FLOAT
-    },
-    basalTime: {
-        type: Sequelize.INTEGER
-    },
-    validate: {
-        isDate: true
-      },
-    bolusQty: {
-        type: Sequelize.INTEGER
-    }
-});
+module.exports = function(){
+    var insulin = sequelize.define("insulin",{
+        
+        time: {
+            type: Sequelize.DATETIME
+        },
+        units: {
+            type: Sequelize.FLOAT
+        },
+        kind: {
+            type: Sequelize.STRING
+        }
+    });
 
-insulin.sync();
+    
+    insulin.associate = function(models){
+        insulin.belongsTo(models.userInfo, {
+            as: userName,
+            foreignKey: {
+                    allowNull: false
 
-module.exports = insulin;
+            }
+        });
+    };
+    return insulin;
+}

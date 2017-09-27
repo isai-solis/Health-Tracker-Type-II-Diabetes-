@@ -1,30 +1,57 @@
 var Sequelize = require("sequelize");
 var sequelize = require("../config/connection.js");
 
-var userInfo = sequelize.define("userInfo",{
-    id: {
-        type: Sequelize.INTEGER
-    },
-    name: {
-        type: Sequelize.STRING
-    },
-    birthDate: {
-        type: Sequelize.DATE
-    },
-    weight: {
-        type: Sequelize.INTEGER
-    },
-    height: {
-        type: Sequelize.INTEGER
-    },
-    userName: {
-        type: Sequelize.STRING
-    },
-    password: {
-        type: Sequelize.STRING
-    }
-});
+module.exports = function(){
+    var userInfo = sequelize.define("userInfo",{
+        name: {
+            type: Sequelize.STRING
+        },
+        birthDate: {
+            type: Sequelize.DATE
+        },
+        weight: {
+            type: Sequelize.INTEGER
+        },
+        height: {
+            type: Sequelize.INTEGER
+        },
+        userName: {
+            type: Sequelize.STRING
+        },
+        password: {
+            type: Sequelize.STRING
+        }
+    });
 
-userInfo.sync();
+    userInfo.associate = function(){
+        userInfo.hasMany(models.activity, {
+            onDelete: "cascade"
+        });
+    };
 
-module.exports = userInfo;
+    userInfo.associate = function(models){
+        userInfo.hasMany(models.bloodSugarM, {
+            onDelete: "cascade"
+        });
+    };
+
+    userInfo.associate = function(){
+        userInfo.hasMany(models.insulin, {
+            onDelete: "cascade"
+        });
+    };
+
+    userInfo.associate = function(){
+        userInfo.hasMany(models.meals, {
+            onDelete: "cascade"
+        });
+    };
+
+    userInfo.associate = function(){
+        userInfo.hasMany(models.medications, {
+            onDelete: "cascade"
+        });
+    };
+
+return userInfo;
+};

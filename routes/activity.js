@@ -23,10 +23,9 @@ module.exports = function(){
 
     activity.associate = function(models){
         activity.belongsTo(models.userInfo, {
-            as: userName,
-                foreignKey: {
-                        allowNull: false
-                }
+            foreignKey: {
+                allowNull: false
+            }
         });
     };
 

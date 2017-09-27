@@ -1,5 +1,5 @@
 {
-  "name": "project-x",
+  "name": "health-tracker-type-ii-diabetes-",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,17 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/isai-solis/Project-X.git"
+    "url": "git+https://github.com/isai-solis/health-tracker-type-ii-diabetes-.git"
   },
   "author": "Audrey Fletcher, Mark Strelecky, Joshua Summitt, Isai Solis",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/isai-solis/Project-X/issues"
+    "url": "https://github.com/isai-solis/health-tracker-type-ii-diabetes-/issues"
   },
-  "homepage": "https://github.com/isai-solis/Project-X#readme",
+  "homepage": "https://github.com/isai-solis/health-tracker-type-ii-diabetes-#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.15.4",
     "fs": "0.0.1-security",
+    "mysql2": "^1.4.2",
     "path": "^0.12.7",
     "sequelize": "^4.11.0"
   }
