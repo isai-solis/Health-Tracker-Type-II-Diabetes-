@@ -7,7 +7,7 @@ module.exports = function(app){
   });
 
   app.get("/datalog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/datalog.html"));
+    res.sendFile(path.join(__dirname, "../public/data-log.html"));
   });
 
   app.get("/entry", function(req, res) {
