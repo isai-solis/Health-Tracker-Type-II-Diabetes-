@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING
         },
         birthDate: {
-            type: DataTypes.DATEONLY
+            type: DataTypes.INTEGER
         },
         weight: {
             type: DataTypes.INTEGER
