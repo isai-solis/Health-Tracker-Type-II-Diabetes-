@@ -1,8 +1,12 @@
+<<<<<<< HEAD
+var path = require('path')
+=======
 var path = require("path");
+>>>>>>> 402b4bd42949a953f717153c17f9b881d473fb63
 
 module.exports = function(app){
 
-  app.get("/createprofile", function(req, res) {
+  app.get("/createProfile", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/createprofile.html"));
   });
 
@@ -17,6 +21,5 @@ module.exports = function(app){
   app.get("/login", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
-
 };
 

@@ -1,15 +1,12 @@
-var user = sessionStorage.getItem('userName');
-var user = "jsmith"
-console.log("user = " + user);
-
+// var user = sessionStorage.getItem('userName');
+var user = "jsmith";
 
 if (user == null){
 	console.log("you messed up");
 
-	window.location.href = ("/login");
-
 }
 
+console.log("user = " + user);
 
 //buttons for displaying each type of entry form
 $("#meal-entry").on("click", function(){
@@ -52,15 +49,6 @@ $("#meal-submit").on("click", function(){
 			$("#carbs").val("");
 			$("#meal-time").val("");
 			$("#meal-form").css("display", "none");
-		
-		
-	// 		else{
-				
-	// 			$("#food").val("");
-	// 			$("#carbs").val("");
-	// 			$("#meal-time").val("");
-	// 			console.log("failure");
-	// 		}
 	});
 });
 
@@ -91,7 +79,7 @@ $("#insulin-submit").on("click", function(){
 		userName: user,
 		units: $("#insulin-units").val(),
 		type: $("#insulin-type").val(),
-		time: $("#insulin-time").val()
+		timeTaken: $("#insulin-time").val()
 	}
 	console.log(dataSubmit);
 	$.post("/api/insulin", dataSubmit,
@@ -117,10 +105,8 @@ $("#activity-submit").on("click", function(){
 		userName: user,
 		activity: $("#activity").val(),
 		mood: $("#mood").val(),
-		duration: $("#duration").val(), 		
-		time: $("#activity-time").val(),
-		
-		
+		duration: $("#duration").val(), 
+		time: $("#activity-time").val()
 	}
 	console.log(dataSubmit);
 	$.post("/api/activity", dataSubmit,

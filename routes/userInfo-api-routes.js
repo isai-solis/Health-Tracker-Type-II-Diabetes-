@@ -4,9 +4,13 @@ module.exports = function(app){
     app.post("/api/userInfo", function(req, res){
         db.userInfo.create(req.body).then(function(dbuserInfo){
             // res.json(dbuserInfo);
-            console.log("post");
+           
             var user = dbuserInfo.userName;
-            console.log(user);
+
+            // sessionStorage.setItem('userName', user);
+
+            console.log(dbuserInfo.__proto__);
+            res.redirect("/entry");
             res.end();
         });
     });
