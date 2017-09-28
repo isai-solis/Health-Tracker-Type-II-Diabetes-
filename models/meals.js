@@ -1,6 +1,5 @@
 
 module.exports = function(sequelize, DataTypes){
-    console.log('meals')
     var meals = sequelize.define("meals",{
         timeEaten: {
             type: DataTypes.DATE
@@ -15,7 +14,7 @@ module.exports = function(sequelize, DataTypes){
 
     meals.associate = function(models){
         meals.belongsTo(models.userInfo, {
-            foreignKey: models.userInfo_Id
+             as: models.userInfo.userName,
         });
     };
     return meals;

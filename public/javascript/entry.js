@@ -1,21 +1,11 @@
-var user = sessionStorage.getItem('userName');
-<<<<<<< HEAD
-=======
+// var user = sessionStorage.getItem('userName');
+var user = "jsmith";
 
-
->>>>>>> dd5c11f5204c2561a573ad9f7d837558053e0086
 if (user == null){
 	console.log("you messed up");
 
 }
 
-<<<<<<< HEAD
-// if (user == null){
-// 	$.get(currentURL + "/login"
-// }
-
-=======
->>>>>>> dd5c11f5204c2561a573ad9f7d837558053e0086
 console.log("user = " + user);
 
 //buttons for displaying each type of entry form
@@ -98,7 +88,7 @@ $("#insulin-submit").on("click", function(){
 		userName: user,
 		units: $("#insulin-units").val(),
 		type: $("#insulin-type").val(),
-		time: $("#insulin-time").val()
+		timeTaken: $("#insulin-time").val()
 	}
 	console.log(dataSubmit);
 	$.post("/api/insulin", dataSubmit,

@@ -12,14 +12,11 @@ module.exports = function(sequelize, DataTypes){
         }
     });
 
-    
     insulin.associate = function(models){
         insulin.belongsTo(models.userInfo, {
              as: models.userInfo.userName,
 
         });
     };
-
-
     return insulin;
 }

@@ -12,8 +12,11 @@ module.exports = function(app){
             console.log(dbinsulin)
             db.userInfo.find({where: {userName: req.body.userName}})
                 .then(function(user) {
-                    console.log(user)
-                    user.addInsulin(dbinsulin)
+                console.log("user");
+                console.log(user);
+                
+
+                user.addInsulin(dbinsulin)
             })
         })
     });

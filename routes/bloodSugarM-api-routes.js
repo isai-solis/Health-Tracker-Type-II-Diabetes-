@@ -8,9 +8,9 @@ module.exports = function(app){
           mgDl: req.body.glucose,
           timeOfM: req.body.time
       }).then(function(dbbloodSugarM){
-           db.bloodSugarM.find({ where: {userName: req.body.userName}})
+           db.userInfo.find({ where: {userName: req.body.userName}})
            .then(function(user){
-               user.addbloodSugarM(dbbloodSugarM)
+               user.addBloodSugarM(dbbloodSugarM)
            })
       });
     });

@@ -1,5 +1,4 @@
 module.exports = function(sequelize, DataTypes){
-    console.log('a1c')
     var A1C = sequelize.define("A1C",{
         level: {
             type: DataTypes.FLOAT(2,1)

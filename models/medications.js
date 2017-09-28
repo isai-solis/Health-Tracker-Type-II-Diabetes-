@@ -1,6 +1,5 @@
 
 module.exports = function(sequelize, DataTypes){
-    console.log('med')
     var medications = sequelize.define("medications",{
         brand: {
             type: DataTypes.STRING,

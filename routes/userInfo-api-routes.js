@@ -12,7 +12,6 @@ module.exports = function(app){
             console.log(dbuserInfo.__proto__);
             res.redirect("/entry");
             res.end();
-            
         });
     });
 };
