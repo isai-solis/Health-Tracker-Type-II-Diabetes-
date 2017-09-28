@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.FLOAT(2,1)
         },
         testDate: {
-            type: DataTypes.DATEONLY,
+            type: DataTypes.INTEGER,
             validate: {
                 notNull: true
             }
@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes){
         A1C.belongsTo(models.userInfo, {
             as: models.userInfo.userName,
             foreignKey: {
-                allowNull: false
+                // allowNull: false
             }
         });
     };

@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes){
     var insulin = sequelize.define("insulin",{
         
         timeTaken: {
-            type: DataTypes.DATE
+            type: DataTypes.INTEGER
         },
         units: {
             type: DataTypes.INTEGER
@@ -12,14 +12,10 @@ module.exports = function(sequelize, DataTypes){
         }
     });
 
-    
     insulin.associate = function(models){
         insulin.belongsTo(models.userInfo, {
              as: models.userInfo.userName,
-            foreignKey: {
-                    allowNull: false
 
-            }
         });
     };
     return insulin;

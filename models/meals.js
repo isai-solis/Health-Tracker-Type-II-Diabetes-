@@ -2,7 +2,7 @@
 module.exports = function(sequelize, DataTypes){
     var meals = sequelize.define("meals",{
         timeEaten: {
-            type: DataTypes.DATE
+            type: DataTypes.INTEGER
         },
         meal: {
             type: DataTypes.STRING
@@ -15,9 +15,6 @@ module.exports = function(sequelize, DataTypes){
     meals.associate = function(models){
         meals.belongsTo(models.userInfo, {
              as: models.userInfo.userName,
-                foreignKey: {
-                        allowNull: false
-                }
         });
     };
     return meals;
@@ -25,3 +22,12 @@ module.exports = function(sequelize, DataTypes){
 
 
 
+
+
+
+// meals.associate = function(models){
+//         meals.belongsTo(models.userInfo, {
+//             targetKey: models.userInfo.id,
+//             constraints: false
+//         });
+//     };

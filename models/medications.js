@@ -1,7 +1,6 @@
 
 module.exports = function(sequelize, DataTypes){
     var medications = sequelize.define("medications",{
-        
         brand: {
             type: DataTypes.STRING,
             validate: {
@@ -16,9 +15,6 @@ module.exports = function(sequelize, DataTypes){
         },
         dose: {
             type: DataTypes.FLOAT(6,1),
-            validate: {
-                notNull: true
-            }
         },
     });
     
@@ -26,7 +22,7 @@ module.exports = function(sequelize, DataTypes){
         medications.belongsTo(models.userInfo, {
              as: models.userInfo.userName,
             foreignKey: {
-                    allowNull: false
+                    // allowNull: false
             }
         });
     };
