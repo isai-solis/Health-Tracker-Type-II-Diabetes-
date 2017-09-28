@@ -1,8 +1,8 @@
 
 module.exports = function(sequelize, DataTypes){
     var meals = sequelize.define("meals",{
-        time: {
-            type: DataTypes.DATE
+        timeEaten: {
+            type: DataTypes.DATETIME
         },
         meal: {
             type: DataTypes.STRING
