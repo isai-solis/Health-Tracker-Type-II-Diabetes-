@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-var path = require('path')
-=======
 var path = require("path");
->>>>>>> 402b4bd42949a953f717153c17f9b881d473fb63
 
 module.exports = function(app){
 
