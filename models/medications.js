@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         dose: {
-            type: DataTypes.FLOAT,
+            type: DataTypes.FLOAT(6,1),
             validate: {
                 notNull: true
             }
