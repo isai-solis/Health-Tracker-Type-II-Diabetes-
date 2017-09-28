@@ -1,15 +1,7 @@
 var user = sessionStorage.getItem('userName');
-<<<<<<< HEAD
-
-if (user == null){
-	console.log("you messed up");
-
-}
-=======
 // if (user == null){
 // 	$.get(currentURL + "/login"
 // }
->>>>>>> origin
 console.log("user = " + user);
 
 //buttons for displaying each type of entry form
@@ -43,7 +35,6 @@ $("#meal-submit").on("click", function(){
 		userName: user,
 		food: $("#food").val(),
 		carbs: $("#carbs").val(),
-		time: $("#meal-time").val(),
 		date: $("#meal-date").val()
 	}
 	console.log("entry.js ------------------");
