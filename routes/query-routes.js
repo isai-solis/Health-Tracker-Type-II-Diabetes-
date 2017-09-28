@@ -8,20 +8,21 @@ module.exports = function(app){
         var userName = req.body.userName;
         
         switch(category){
-            case "userInfo":
-                db.userInfo.findAll({
-                    where: {
-                        userName: userName
-                    }
-                }).then(function (dbuserInfo) {
-                    console.log("USER INFO FROM QUERY CALL BACK");
-                    console.log(dbuserInfo)
-                    res.json(dbuserInfo);
-                });
-                break;
+            // case "userInfo":
+            //     db.userInfo.findAll({
+            //         where: {
+            //             userName: userName
+            //         }
+            //     }).then(function (dbuserInfo) {
+            //         console.log("USER INFO FROM QUERY CALL BACK");
+            //         console.log(dbuserInfo)
+            //         res.json(dbuserInfo);
+            //     });
+            //     break;
             
 
             case "meals":
+                console
                 db.meals.findAll({})
                 .then(function (dbmeals) {
                     db.userInfo.findAll({where: {userName: userName}})
