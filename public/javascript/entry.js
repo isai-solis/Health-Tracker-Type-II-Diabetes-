@@ -1,12 +1,16 @@
 var user = sessionStorage.getItem('userName');
 
+
 if (user == null){
 	console.log("you messed up");
 }
 
+<<<<<<< HEAD
 // $.get("/login" + searchedCharacter, function(data) {
 // });
 
+=======
+>>>>>>> dd5c11f5204c2561a573ad9f7d837558053e0086
 console.log("user = " + user);
 
 //buttons for displaying each type of entry form
@@ -40,7 +44,6 @@ $("#meal-submit").on("click", function(){
 		userName: user,
 		food: $("#food").val(),
 		carbs: $("#carbs").val(),
-		time: $("#meal-time").val(),
 		date: $("#meal-date").val()
 	}
 	console.log("entry.js ------------------");
