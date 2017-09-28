@@ -24,7 +24,7 @@ module.exports = function(sequelize, DataTypes){
 
 	db.activity.create({level: "activity", timeDuration: 60, howFeel: "Medium", activityTime: 1506629804,
 	}).then(function(dbactivity){
-	    db.userInfo.find({where: {userName: 'susjones'}})
+	    db.userInfo.find({where: {userName: 'susjones15'}})
 	    .then(function(user) {
 	        user.addActivity(dbactivity)
 	    })
@@ -44,7 +44,7 @@ module.exports = function(sequelize, DataTypes){
 	}).then(function(dbbloodSugarM){
 	    db.userInfo.find({where: {userName: 'jsmith'}})
 	    .then(function(user) {
-	        user.addBloodSugarM(bloodSugarM)
+	        user.addBloodSugarM(dbbloodSugarM)
 	    })
 	});
 
@@ -52,7 +52,7 @@ module.exports = function(sequelize, DataTypes){
 	}).then(function(dbbloodSugarM){
 	    db.userInfo.find({where: {userName: 'jsmith'}})
 	    .then(function(user) {
-	        user.addBloodSugarM(bloodSugarM)
+	        user.addBloodSugarM(dbbloodSugarM)
 	    })
 	});
 
@@ -60,7 +60,7 @@ module.exports = function(sequelize, DataTypes){
 	}).then(function(dbbloodSugarM){
 	    db.userInfo.find({where: {userName: 'jsmith'}})
 	    .then(function(user) {
-	        user.addBloodSugarM(bloodSugarM)
+	        user.addBloodSugarM(dbbloodSugarM)
 	    })
 	});
 
@@ -68,7 +68,7 @@ module.exports = function(sequelize, DataTypes){
 	}).then(function(dbbloodSugarM){
 	    db.userInfo.find({where: {userName: 'jsmith'}})
 	    .then(function(user) {
-	        user.addBloodSugarM(bloodSugarM)
+	        user.addBloodSugarM(dbbloodSugarM)
 	    })
 	});
 
@@ -76,67 +76,67 @@ module.exports = function(sequelize, DataTypes){
 	}).then(function(dbbloodSugarM){
 	    db.userInfo.find({where: {userName: 'jsmith'}})
 	    .then(function(user) {
-	        user.addBloodSugarM(bloodSugarM)
+	        user.addBloodSugarM(dbbloodSugarM)
 	    })
 	});
 
 
 	//insulin
 	db.insulin.create({timeTaken: 150662904, units: 4, kind: "basal"
-	}).then(function(dbbloodSugarM){
+	}).then(function(dbinsulin){
 	    db.userInfo.find({where: {userName: 'jsmith'}})
 	    .then(function(user) {
-	        user.addBloodSugarM(bloodSugarM)
+	        user.addInsulin(dbinsulin)
 	    })
 	});
 
 	db.insulin.create({timeTaken: 150632904, units: 3, kind: "basal"
-	}).then(function(dbbloodSugarM){
+	}).then(function(dbinsulin){
 	    db.userInfo.find({where: {userName: 'jsmith'}})
 	    .then(function(user) {
-	        user.addBloodSugarM(bloodSugarM)
+	        user.addInsulin(dbinsulin)
 	    })
 	});
 
 	db.insulin.create({timeTaken: 150612904, units: 1, kind: "basal"
-	}).then(function(dbbloodSugarM){
+	}).then(function(dbinsulin){
 	    db.userInfo.find({where: {userName: 'jsmith'}})
 	    .then(function(user) {
-	        user.addBloodSugarM(bloodSugarM)
+	        user.addInsulin(dbinsulin)
 	    })
 	});
 
 
 	//meals
 	db.meals.create({meal: "combo pizza", carbs: 50, timeEaten: 150662004
-	}).then(function(dbbloodSugarM){
+	}).then(function(dbmeals){
 	    db.userInfo.find({where: {userName: 'jsmith'}})
 	    .then(function(user) {
-	        user.addBloodSugarM(bloodSugarM)
+	        user.addMeals(dbmeals)
 	    })
 	});
 
 	db.meals.create({meal: "mushroom pizza", carbs: 50, timeEaten: 150632004
-	}).then(function(dbbloodSugarM){
+	}).then(function(dbmeals){
 	    db.userInfo.find({where: {userName: 'jsmith'}})
 	    .then(function(user) {
-	        user.addBloodSugarM(bloodSugarM)
+	        user.addMeals(dbmeals)
 	    })
 	});
 
 	db.meals.create({meal: "cauliflower/spinach", carbs: 5, timeEaten: 150612004
-	}).then(function(dbbloodSugarM){
+	}).then(function(dbmeals){
 	    db.userInfo.find({where: {userName: 'jsmith'}})
 	    .then(function(user) {
-	        user.addBloodSugarM(bloodSugarM)
+	        user.addMeals(dbmeals)
 	    })
 	});
 
 	db.meals.create({meal: "pepperoni pizza", carbs: 50, timeEaten: 150658004
-	}).then(function(dbbloodSugarM){
+	}).then(function(dbmeals){
 	    db.userInfo.find({where: {userName: 'jsmith'}})
 	    .then(function(user) {
-	        user.addBloodSugarM(bloodSugarM)
+	        user.addMeals(dbmeals)
 	    })
 	});
 
