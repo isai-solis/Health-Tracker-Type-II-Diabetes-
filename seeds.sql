@@ -56,4 +56,19 @@ INSERT INTO insulin (timeTaken, units, kind, userNameId) VALUES (2017-06-13 12:3
 INSERT INTO insulin (timeTaken, units, kind, userNameId) VALUES (2017-06-24 17:45:00, 4, "Novolog", 1);
 INSERT INTO insulin (timeTaken, units, kind, userNameId) VALUES (2017-06-30 21:30:00, 16, "Lantus", 1);
 
-INSERT INTO meals (timeEaten, meal, carbs) VALUES (2017)
+INSERT INTO meals (timeEaten, meal, carbs, userNameId) VALUES (2017-09-27, "Eggs, Bacon, and English Muffin", 25, 1);
+INSERT INTO meals (timeEaten, meal, carbs, userNameId) VALUES (2017-09-27, "Turkey Breast, Pasta, and peas", 50, 1);
+INSERT INTO meals (timeEaten, meal, carbs, userNameId) VALUES (2017-09-27, "Pork Chop, Green Beans, and Roll", 30, 1);
+INSERT INTO meals (timeEaten, meal, carbs, userNameId) VALUES (2017-09-27, "Yogurt and Granola", 20, 1);
+
+INSERT INTO medications (brand, frequency, dose, userNameId) VALUES ("Metformin", 3, 850, 1);
+INSERT INTO medications (brand, frequency, dose, userNameId) VALUES ("Metformin", 3, 700, 2);
+INSERT INTO medications (brand, frequency, dose, userNameId) VALUES ("Metformin", 3, 800, 3);
+INSERT INTO medications (brand, frequency, dose, userNameId) VALUES ("Metformin", 3, 900, 4);
+INSERT INTO medications (brand, frequency, dose, userNameId) VALUES ("Metformin", 3, 850, 5);
+
+INSERT INTO userInfo (name, email, gender, birthDate, weight, height, userName, password) VALUES ("Joe Smith", "js@gmail.com", "male", 1970-07-02, 200, 68, "jsmith", "googleyeyes");
+INSERT INTO userInfo (name, email, gender, birthDate, weight, height, userName, password) VALUES ("Susan Jones", "susjones@gmail.com", "female", 1967-06-12, 180, 64, "susjones15", "droopeyeyes");
+INSERT INTO userInfo (name, email, gender, birthDate, weight, height, userName, password) VALUES ("Aaron Rudd", "aarudd@gmail.com", "male", 1974-05-21, 195, 64, "aaronrud19", "hungryeyes");
+INSERT INTO userInfo (name, email, gender, birthDate, weight, height, userName, password) VALUES ("Paul Garcia", "paulgar734@gmail.com", "male", 1963-09-29, 210, 69, "pauleyg", "twobootsworn");
+INSERT INTO userInfo (name, email, gender, birthDate, weight, height, userName, password) VALUES ("Beatrice Rutherford", "beabea@gmail.com", "female", 1971-08-12, 205, 68, "beabeababy", "mindyobidness");
