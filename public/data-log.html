@@ -6,37 +6,43 @@
   <title>Health Tracker</title>
 
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-	<form>
-		<div id="log-display">
-			<div id="query-bar">
-					<form>
-					  <select id="data-type">
+  <div class="wrapper">
+    <div class="datalog">
+
+
+      <form>
+        <div id="log-display">
+          <div id="query-bar">
+            <form>
+              <select id="data-type">
 					  	<option value="all">All</option>
 						  <option value="meals">Food</option>
 						  <option value="bloodSugarM">Blood Sugar</option>
 						  <option value="insulin">Insulin</option>
 						  <option value="activity">Activity</option>
 						</select>
-						<select id="time-frame">
+              <select id="time-frame">
 						  <option value="24">Last 24 Hrs</option>
 						  <option value="week">Last Week</option>
 						  <option value="month">Last Month</option>
 						  <option value="quarter">Last Quarter</option>
 						</select>
-						<button id ="query-submit">Submit Query</button>
-					</form>
-				<div id="data-display">
-				</div>
-			</div>
-		</div>
-	</form>	
+              <button id="query-submit">Submit Query</button>
+            </form>
+            <div id="data-display">
+            </div>
+          </div>
+        </div>
+      </form>
 
-	<script type="text/javascript" src="javascript/data-log.js"></script>
+      <script type="text/javascript" src="javascript/data-log.js"></script>
+    </div>
+  </div>
+
 </body>
+
 </html>
