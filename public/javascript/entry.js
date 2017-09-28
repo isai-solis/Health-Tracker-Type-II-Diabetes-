@@ -1,15 +1,8 @@
 var user = sessionStorage.getItem('userName');
-<<<<<<< HEAD
-
 if (user == null){
 	console.log("you messed up");
 
 }
-=======
-// if (user == null){
-// 	redirect("/loginauth");
-// }
->>>>>>> origin
 console.log("user = " + user);
 
 //buttons for displaying each type of entry form

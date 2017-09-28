@@ -26,7 +26,7 @@ module.exports = function(sequelize, DataTypes){
         medications.belongsTo(models.userInfo, {
              as: models.userInfo.userName,
             foreignKey: {
-                    allowNull: false
+                    // allowNull: false
             }
         });
     };

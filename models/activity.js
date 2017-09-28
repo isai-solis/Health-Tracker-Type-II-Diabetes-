@@ -8,20 +8,15 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING
         },
         time: {
-            type: DataTypes.DATE,
-            validate: {
-                notNull: true
-            }
-        }
-
-        
+            type: DataTypes.TIME,
+        }        
     });
 
     activity.associate = function(models){
         activity.belongsTo(models.userInfo, {
             as: models.userInfo.userName,
                 foreignKey: {
-                        allowNull: false
+                        // allowNull: false
                 }
         });
     };

@@ -5,11 +5,7 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.INTEGER
         },
         timeOfM: {
-            type: DataTypes.DATE,
-            validate: {
-                isDate: true,
-                notNull: true
-            },
+            type: DataTypes.TIME,
         },
         
     });
@@ -18,7 +14,7 @@ module.exports = function(sequelize, DataTypes){
         bloodSugarM.belongsTo(models.userInfo, {
              as: models.userInfo.userName, 
                 foreignKey: {
-                    allowNull: false
+                    
                 }
         });
     };

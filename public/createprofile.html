@@ -17,7 +17,7 @@
     <div class="container">
       <label><b>Username</b></label>
       <input type="text" id="userName" placeholder="Enter Username" name="userName" required>
-      
+
       <label><b>Name</b></label>
       <input type="text" id="name" placeholder="Enter Name" name="name" required>
 
@@ -52,6 +52,13 @@
     </div>
   </form>
 
-   <script type="text/javascript" src="javascript/createProfile.js"> </script>
+  
+
+  <script> 
+        $("#submitBtn").on("click", function(){
+            sessionStorage.setItem("userName", $("#userName").val());
+        });
+        
+  </script>
 </body>
 </html>
