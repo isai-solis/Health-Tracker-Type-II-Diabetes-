@@ -1,22 +1,20 @@
-var Sequelize = require("sequelize");
-var sequelize = require("../config/connection.js");
 
-module.exports = function(){
+module.exports = function(sequelize, DataTypes){
     var meals = sequelize.define("meals",{
         time: {
-            type: Sequelize.DATETIME
+            type: DataTypes.DATE
         },
         meal: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         carbs: {
-            type: Sequelize.INTEGER
+            type: DataTypes.INTEGER
         }
     });
 
     meals.associate = function(models){
         meals.belongsTo(models.userInfo, {
-            as: userName,
+             as: models.userInfo.userName,
                 foreignKey: {
                         allowNull: false
                 }
