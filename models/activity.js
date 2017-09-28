@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING
         },
         activityTime: {
-            type: DataTypes.DATE,
+            type: DataTypes.INTEGER,
         }
 
         
