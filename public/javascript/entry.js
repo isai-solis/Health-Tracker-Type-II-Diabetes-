@@ -2,8 +2,11 @@ var user = sessionStorage.getItem('userName');
 
 if (user == null){
 	console.log("you messed up");
-
 }
+
+// $.get("/login" + searchedCharacter, function(data) {
+// });
+
 console.log("user = " + user);
 
 //buttons for displaying each type of entry form
