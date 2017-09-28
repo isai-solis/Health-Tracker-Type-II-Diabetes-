@@ -29,19 +29,3 @@ $("#login-submit").on("click", function(){
 
 
 
-
-
-
-
-
-
-
-
-<script>
-
-
-.then(if profile successful)
-
-sessionStorage.setItem('userName', $("#userName").val())
-
-</scipt>
