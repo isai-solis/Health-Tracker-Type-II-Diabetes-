@@ -1,8 +1,8 @@
 
 module.exports = function(sequelize, DataTypes){
     var meals = sequelize.define("meals",{
-        time: {
-            type: DataTypes.STRING
+        timeEaten: {
+            type: DataTypes.DATETIME
         },
         meal: {
             type: DataTypes.STRING
@@ -19,6 +19,14 @@ module.exports = function(sequelize, DataTypes){
     };
     return meals;
 }
+
+
+// db.healthrecord.create({/*healthdata*/}).then(function (healthrecord) {
+//     db.user.find({where: {name: 'asdf'}})
+//         .then(function(user) {
+//             user.addHealthRecord(healthrecord)
+//         })
+// })
 
 
 

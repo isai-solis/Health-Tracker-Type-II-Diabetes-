@@ -9,7 +9,7 @@ module.exports = function(app){
 
             // sessionStorage.setItem('userName', user);
 
-            console.log(user);
+            console.log(user.__proto__);
             res.redirect("/entry");
             res.end();
             

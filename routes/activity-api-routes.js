@@ -6,6 +6,7 @@ module.exports = function(app){
       db.activity.create({
           time: req.body.time,
           level: req.body.activity,
+          duration: req.body.duration,
           howFeel: req.body.mood
       }).then(function(dbactivity){
             res.json(dbactivity);

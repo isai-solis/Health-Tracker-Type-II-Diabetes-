@@ -1,11 +1,11 @@
 module.exports = function(sequelize, DataTypes){
     var insulin = sequelize.define("insulin",{
         
-        time: {
-            type: DataTypes.INTEGER
+        timeTaken: {
+            type: DataTypes.DATE
         },
         units: {
-            type: DataTypes.FLOAT
+            type: DataTypes.INTEGER
         },
         kind: {
             type: DataTypes.STRING
@@ -16,11 +16,10 @@ module.exports = function(sequelize, DataTypes){
     insulin.associate = function(models){
         insulin.belongsTo(models.userInfo, {
              as: models.userInfo.userName,
-            foreignKey: {
-                    // allowNull: false
 
-            }
         });
     };
+
+
     return insulin;
 }

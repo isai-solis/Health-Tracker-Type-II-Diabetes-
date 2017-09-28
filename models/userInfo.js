@@ -43,12 +43,12 @@ module.exports = function(sequelize, DataTypes){
             // foreignKey: models.userInfo.Id,
             // onDelete: "cascade"
         });
-         userInfo.hasMany(models.medications, {
-            onDelete: "cascade"
-        });
-         userInfo.hasMany(models.A1C, {
-            onDelete: "cascade"
-        });
+        //  userInfo.hasMany(models.medications, {
+        //     onDelete: "cascade"
+        // });
+        //  userInfo.hasMany(models.A1C, {
+        //     onDelete: "cascade"
+        // });
 
     };
 
