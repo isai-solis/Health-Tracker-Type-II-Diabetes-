@@ -9,7 +9,7 @@ module.exports = function(app){
 
             // sessionStorage.setItem('userName', user);
 
-            console.log(user.__proto__);
+            console.log(dbuserInfo.__proto__);
             res.redirect("/entry");
             res.end();
             

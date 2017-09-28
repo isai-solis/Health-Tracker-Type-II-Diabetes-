@@ -8,14 +8,11 @@ module.exports = function(app){
           mgDl: req.body.glucose,
           timeOfM: req.body.glucose-time
       }).then(function(dbbloodSugarM){
-            res.json(dbbloodSugarM);
+           db.bloodSugarM.find({ where: {userName: req.body.userName}})
+           .then(function(user){
+               user.addbloodSugarM(dbbloodSugarM)
+           })
       });
     });
-
-    // get all of the logged blood sugar measurements
-    // app.get("", function(req, res){
-    //     db.bloodSugarM.findAll({}).then(function(dbbloodSugarM){
-    //         res.json(dbbloodSugarM);
-    //     });
-    // });
 };
+

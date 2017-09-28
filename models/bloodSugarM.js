@@ -1,4 +1,5 @@
 module.exports = function(sequelize, DataTypes){
+    console.log('bloodSuyg')
     var bloodSugarM = sequelize.define("bloodSugarM",{
     
         mgDl: {
@@ -12,10 +13,10 @@ module.exports = function(sequelize, DataTypes){
 
     bloodSugarM.associate = function(models){
         bloodSugarM.belongsTo(models.userInfo, {
-             as: models.userInfo.userName, 
-                foreignKey: {
+             as: models.userInfo.userName//, 
+                // foreignKey: {
                     
-                }
+                // }
         });
     };
 

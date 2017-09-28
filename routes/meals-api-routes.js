@@ -8,14 +8,8 @@ module.exports = function(app){
       db.meals.create({
           meal: req.body.food,
           carbs: req.body.carbs,
-<<<<<<< HEAD
-          time: req.body.time,
-          userName: req.body.userName,
-        
-=======
           timeEaten: req.body.meal-date,
 
->>>>>>> eb4b7da7a20aa52e4177f55cd19ec232bdce44de
       }).then(function(dbmeals){
             res.json(dbmeals);
             console.log("__________________________________");

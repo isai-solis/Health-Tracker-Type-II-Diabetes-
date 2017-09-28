@@ -1,5 +1,6 @@
 
 module.exports = function(sequelize, DataTypes){
+    console.log('meals')
     var meals = sequelize.define("meals",{
         timeEaten: {
             type: DataTypes.DATE
