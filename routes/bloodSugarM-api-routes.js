@@ -6,7 +6,7 @@ module.exports = function(app){
     app.post("/api/glucose", function(req, res){
       db.bloodSugarM.create({
           mgDl: req.body.glucose,
-          timeOfM: req.body.time
+          timeOfM: req.body.glucose-time
       }).then(function(dbbloodSugarM){
             res.json(dbbloodSugarM);
       });

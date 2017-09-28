@@ -55,3 +55,5 @@ INSERT INTO insulin (timeTaken, units, kind, userNameId) VALUES (2017-06-05 07:0
 INSERT INTO insulin (timeTaken, units, kind, userNameId) VALUES (2017-06-13 12:30:00, 2, "Novolog", 1);
 INSERT INTO insulin (timeTaken, units, kind, userNameId) VALUES (2017-06-24 17:45:00, 4, "Novolog", 1);
 INSERT INTO insulin (timeTaken, units, kind, userNameId) VALUES (2017-06-30 21:30:00, 16, "Lantus", 1);
+
+INSERT INTO meals (timeEaten, meal, carbs) VALUES (2017)
