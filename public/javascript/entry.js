@@ -119,8 +119,10 @@ $("#activity-submit").on("click", function(){
 		userName: user,
 		activity: $("#activity").val(),
 		mood: $("#mood").val(),
-		duration: $("#duration").val(), 
-		time: $("#activity-time").val()
+		duration: $("#duration").val(), 		
+		time: $("#activity-time").val(),
+		
+		
 	}
 	console.log(dataSubmit);
 	$.post("/api/activity", dataSubmit,
