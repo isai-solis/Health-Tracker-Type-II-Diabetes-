@@ -1,6 +1,6 @@
 var user = sessionStorage.getItem('userName');
 // if (user == null){
-// 	redirect("/loginauth");
+// 	$.get(currentURL + "/login"
 // }
 console.log("user = " + user);
 
@@ -35,7 +35,8 @@ $("#meal-submit").on("click", function(){
 		userName: user,
 		food: $("#food").val(),
 		carbs: $("#carbs").val(),
-		time: $("#meal-time").val()
+		time: $("#meal-time").val(),
+		date: $("#meal-date").val()
 	}
 	console.log(dataSubmit);
 	$.post(currentURL + "/api/meal", dataSubmit,
