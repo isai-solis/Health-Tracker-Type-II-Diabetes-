@@ -1,9 +1,9 @@
 module.exports = function(sequelize, DataTypes){
     var A1C = sequelize.define("A1C",{
         level: {
-            type: DataTypes.STRING
+            type: DataTypes.FLOAT(2,1)
         },
-        time: {
+        testDate: {
             type: DataTypes.DATE,
             validate: {
                 notNull: true
