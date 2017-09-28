@@ -22,12 +22,7 @@ module.exports = function(sequelize, DataTypes){
 }
 
 
-// db.healthrecord.create({/*healthdata*/}).then(function (healthrecord) {
-//     db.user.find({where: {name: 'asdf'}})
-//         .then(function(user) {
-//             user.addHealthRecord(healthrecord)
-//         })
-// })
+
 
 
 

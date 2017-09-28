@@ -8,7 +8,7 @@ module.exports = function(app){
       db.meals.create({
           meal: req.body.food,
           carbs: req.body.carbs,
-          timeEaten: req.body.meal-date,
+          timeEaten: req.body.date,
 
       }).then(function(dbmeals){
             res.json(dbmeals);
