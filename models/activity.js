@@ -4,11 +4,14 @@ module.exports = function(sequelize, DataTypes){
         level: {
             type: DataTypes.STRING
         },
+        timeDuration: {
+            type: DataTypes.INTEGER
+        },
         howFeel: {
             type: DataTypes.STRING
         },
-        time: {
-            type: DataTypes.DATE,
+        activityTime: {
+            type: DataTypes.DATETIME,
             validate: {
                 notNull: true
             }
