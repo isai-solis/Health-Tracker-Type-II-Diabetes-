@@ -1,17 +1,15 @@
 var user = sessionStorage.getItem('userName');
+var user = "jsmith"
+console.log("user = " + user);
 
 
 if (user == null){
 	console.log("you messed up");
+
+	window.location.href = ("/login");
+
 }
 
-<<<<<<< HEAD
-// $.get("/login" + searchedCharacter, function(data) {
-// });
-
-=======
->>>>>>> dd5c11f5204c2561a573ad9f7d837558053e0086
-console.log("user = " + user);
 
 //buttons for displaying each type of entry form
 $("#meal-entry").on("click", function(){
