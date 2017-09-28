@@ -1,9 +1,11 @@
 var user = sessionStorage.getItem('userName');
 
+
 if (user == null){
 	console.log("you messed up");
 
 }
+
 console.log("user = " + user);
 
 //buttons for displaying each type of entry form
@@ -37,7 +39,6 @@ $("#meal-submit").on("click", function(){
 		userName: user,
 		food: $("#food").val(),
 		carbs: $("#carbs").val(),
-		time: $("#meal-time").val(),
 		date: $("#meal-date").val()
 	}
 	console.log("entry.js ------------------");
@@ -113,8 +114,10 @@ $("#activity-submit").on("click", function(){
 		userName: user,
 		activity: $("#activity").val(),
 		mood: $("#mood").val(),
-		duration: $("#duration").val(), 
-		time: $("#activity-time").val()
+		duration: $("#duration").val(), 		
+		time: $("#activity-time").val(),
+		
+		
 	}
 	console.log(dataSubmit);
 	$.post("/api/activity", dataSubmit,
