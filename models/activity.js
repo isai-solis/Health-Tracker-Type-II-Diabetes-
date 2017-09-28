@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING
         },
         activityTime: {
-            type: DataTypes.DATETIME,
+            type: DataTypes.DATE,
             validate: {
                 notNull: true
             }
