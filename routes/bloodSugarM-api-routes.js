@@ -8,11 +8,11 @@ module.exports = function(app){
           mgDl: req.body.glucose,
           timeOfM: req.body.time
       }).then(function(dbbloodSugarM){
-           db.userInfo.find({ where: {userName: req.body.userName}})
-           .then(function(user){
-               user.addBloodSugarM(dbbloodSugarM)
+            db.userInfo.find({ where: {userName: req.body.userName}})
+            .then(function(user){
+                user.addBloodSugarM(dbbloodSugarM)
            })
-      });
+        });
     });
 };
 

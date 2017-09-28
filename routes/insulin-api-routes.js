@@ -14,8 +14,6 @@ module.exports = function(app){
                 .then(function(user) {
                 console.log("user");
                 console.log(user);
-                
-
                 user.addInsulin(dbinsulin)
             })
         })

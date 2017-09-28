@@ -20,9 +20,28 @@ $("#login-submit").on("click", function(){
 		}
 		else {
 			sessionStorage.setItem('userName', name);
-			$.get("/", function(data) {
-        console.log(data);
-      });		
+			$("#entry-page").css("display", "block");
+			$("#greeting").html("Welcome " + user);			
 		}
 	});
 });
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+.then(if profile successful)
+
+sessionStorage.setItem('userName', $("#userName").val())
+
+</scipt>

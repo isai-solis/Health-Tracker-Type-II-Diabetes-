@@ -49,15 +49,6 @@ $("#meal-submit").on("click", function(){
 			$("#carbs").val("");
 			$("#meal-time").val("");
 			$("#meal-form").css("display", "none");
-		
-		
-	// 		else{
-				
-	// 			$("#food").val("");
-	// 			$("#carbs").val("");
-	// 			$("#meal-time").val("");
-	// 			console.log("failure");
-	// 		}
 	});
 });
 
