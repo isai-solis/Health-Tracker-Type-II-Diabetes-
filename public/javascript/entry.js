@@ -1,15 +1,9 @@
 var user = sessionStorage.getItem('userName');
-<<<<<<< HEAD
 
 if (user == null){
 	console.log("you messed up");
 
 }
-=======
-// if (user == null){
-// 	$.get(currentURL + "/login"
-// }
->>>>>>> origin
 console.log("user = " + user);
 
 //buttons for displaying each type of entry form
