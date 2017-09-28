@@ -1,3 +1,5 @@
+var path = requre("path");
+
 module.exports = function(app){
 
   app.get("/createprofile", function(req, res) {
