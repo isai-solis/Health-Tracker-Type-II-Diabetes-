@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.FLOAT(2,1)
         },
         testDate: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             validate: {
                 notNull: true
             }
