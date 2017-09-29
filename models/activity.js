@@ -5,11 +5,11 @@ module.exports = function(sequelize, DataTypes){
         level: {
             type: DataTypes.STRING
         },
-        timeDuration: {
-            type: DataTypes.INTEGER
-        },
         howFeel: {
             type: DataTypes.STRING
+        },
+        timeDuration: {
+            type: DataTypes.INTEGER
         },
         activityTime: {
             type: DataTypes.INTEGER,

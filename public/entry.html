@@ -18,8 +18,10 @@
           <input type="text" name="food" id="food"><br>
           Carbs (g):<br>
           <input type="number" name="quantity" id="carbs"><br>
-          Date / Time: <br>
+          Date: <br>
           <input type="date" id="meal-date"><br>
+          Time: <br>
+          <input type="time" id="meal-time"><br>
         </form>
         <button id="meal-submit"> Submit </button>
       </div>
@@ -31,6 +33,8 @@
         <form>
           Glucose Level (mg/dl):<br>
           <input type="number" name="quantity" id="glucose"><br>
+          Date: <br>
+          <input type="date" name="usr_date" id="glucose-date"><br>
           Time: <br>
           <input type="time" name="usr_time" id="glucose-time"><br>
         </form>
@@ -41,10 +45,14 @@
       <button id="insulin-entry"> Insulin Entry </button>
       <div id="insulin-form" style="display:none">
           <form class = "entry">
-          Type:
-          <input type="text" id="insulin-type"><br> Units:
-          <input type="number" id="insulin-units"> Time: <br>
-          <input type="time" name="usr_time" id="glucose-time"><br>
+          Type: <br>
+          <input type="text" id="insulin-type"><br> 
+          Units: <br>
+          <input type="number" id="insulin-units"> 
+          Date: <br>
+          <input type="date" name="usr_date" id="insulin-date"><br>
+          Time: <br>
+          <input type="time" name="usr_time" id="insulin-time"><br>
         </form>
         <button id="insulin-submit"> Submit </button>
       </div>
@@ -66,13 +74,18 @@
           <option value="Strenuous Exercise"> Strenuous Exercise </option>
 
 
-        </select><br> Energy Level:
-            <select id="mood">
+        </select><br> 
+          Energy Level:
+        <select id="mood">
           <option value="Low"> Low </option>
           <option value="Medium"> Medium </option>
           <option value="High"> High </option>
-        </select><br> Duration (minutes):
-            <input type="number" id="duration"> Time: <br>
+        </select><br> 
+            Duration (minutes):
+            <input type="number" id="duration"> 
+            Date: <br>
+            <input type="date" name="usr_date" id="activity-date"><br>
+            Time: <br>
             <input type="time" name="usr_time" id="activity-time"><br>
           </form>
           <button id="activity-submit"> Submit </button>
