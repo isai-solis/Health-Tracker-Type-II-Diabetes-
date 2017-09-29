@@ -8,21 +8,7 @@ module.exports = function(app){
         var userName = req.body.userName;
         
         switch(category){
-            // case "userInfo":
-            //     db.userInfo.findAll({
-            //         where: {
-            //             userName: userName
-            //         }
-            //     }).then(function (dbuserInfo) {
-            //         console.log("USER INFO FROM QUERY CALL BACK");
-            //         console.log(dbuserInfo)
-            //         res.json(dbuserInfo);
-            //     });
-            //     break;
-            
-
             case "meals":
-                
                 db.userInfo.findAll({
                     where: {userName: userName},
                     include: [{
@@ -30,55 +16,101 @@ module.exports = function(app){
                         as: "meals"
                     }]
                 }).then(function(data){
-                    // res.JSON(data)
-                    console.log(data);
-                    console.log("MEALS DATA OOOOOOOOOOOOOOOOOOOOO");
+                    var allMeals = [];
                     
+                    for(var i=0; i < data[0].meals.length; i++ ){
+                        var loggedMeal = {
+                            dataMeal: data[0].meals[i].meal,
+                            dataCarbs: data[0].meals[i].carbs,
+                            dataTimeEaten: data[0].meals[i].timeEaten
+                        }
+                        allMeals.push(loggedMeal);
+                    }
+                    var queryReturnMeals = {
+                        key: allMeals
+                    }
+                    res.json(queryReturnMeals);
+                    console.log(queryReturnMeals);
                 });
-
-
-
-
-
-
-
-
-
-
-                // // db.meals.findAll({where: {userName: userName}})
-                // // .then(function (dbmeals) {
-                // db.userInfo.findAll({ 
-                //     where: { userName: userName },
-                //     attributes: ["userInfoId"]
-                // }).then(function(dbuserInfo){
-
-                //     db.meals.findAll({
-                //         where: {userName: dbuserInfo.userName}
-                //     }).then(function(meals){
-                //         res.json(meals);
-                //         console.log(meals);
-                //         meals.getMeals(dbuserInfo);
-                //     });
-                    
-                //     console.log("MEALS DATA OOOOOOOOOOOOOOOOOOOOO");
-                    
-                // });
-        
                 break;
 
             case "insulin":
-                db.insulin.findAll
+                db.userInfo.findAll({
+                    where: {userName: userName},
+                    include: [{
+                        model: db.insulin,
+                        as: "insulin"
+                    }]
+                }).then(function(data){
+                    var allInsulin = [];
+
+                    for(var i=0; i < data[0].insulin.length; i++ ){
+                        var loggedInsulin = {
+                            dataUnits: data[0].insulin[i].units,
+                            dataKins: data[0].insulin[i].kind,
+                            dataTimeTaken: data[0].insulin[i].timeTaken
+                        }
+                        allInsulin.push(loggedInsulin);
+                    }
+                    var queryReturnInsulin = {
+                        key: allInsulin
+                    }
+                    res.json(queryReturnInsulin);
+                    console.log(queryReturnInsulin);
+                });
                 break;
             
             case "activity":
-
+                db.userInfo.findAll({
+                    where: {userName: userName},
+                    include: [{
+                        model: db.activity,
+                        as: "activity"
+                    }]
+                }).then(function(data){
+                    var allactivity = [];
+                    
+                    for(var i=0; i < data[0].activity.length; i++ ){
+                        var loggedactivity = {
+                            dataLevel: data[0].activity[i].level,
+                            dataMood: data[0].activity[i].howFeel,
+                            dataTimeDuration: data[0].activity[i].timeDuration,
+                            dataActivityTime: data[0].activity[i].activityTime
+                        }
+                        allactivity.push(loggedactivity);
+                    }
+                    var queryReturnactivity = {
+                        key: allactivity
+                    }
+                    res.json(queryReturnactivity);
+                    console.log(queryReturnactivity);
+                });
                 break;
             
             case "bloodSugarM": 
-
+                db.userInfo.findAll({
+                    where: {userName: userName},
+                    include: [{
+                        model: db.bloodSugarM,
+                        as: "bloodSugarM"
+                    }]
+                }).then(function(data){
+                    var allbloodSugarM = [];
+     
+                    for(var i=0; i < data[0].bloodSugarM.length; i++ ){
+                        var loggedbloodSugarM = {
+                            dataMeal: data[0].bloodSugarM[i].mgDl,
+                            dataTimeOfM: data[0].bloodSugarM[i].timeOfM,
+                        }
+                        allbloodSugarM.push(loggedbloodSugarM);
+                    }
+                    var queryReturnbloodSugarM = {
+                        key: allbloodSugarM
+                    }
+                    res.json(queryReturnbloodSugarM);
+                    console.log(queryReturnbloodSugarM);
+                });
                 break;
             }
-
     });
-
 };

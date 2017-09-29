@@ -11,9 +11,8 @@ $("#query-submit").on("click", function(){
 		dataType: $("#data-type").val(),
 		time: $("#time-frame").val()
 	}
-	$.post("/api/datalog", querySubmit,
-		function(data){
+	$.post("/api/datalog", querySubmit,function(data){
 			
-			console.log(data);
+		// console.log(data.key);
 	});
 });
