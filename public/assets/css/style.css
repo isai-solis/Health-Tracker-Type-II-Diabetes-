@@ -39,6 +39,7 @@ body{
   position: relative;
   padding-bottom: 80px;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+      opacity: 0.80
 }
 .login.loading button {
   max-height: 100%;
@@ -144,38 +145,62 @@ body{
 .login:not(.loading) button:focus {
   border-bottom-width: 4px;
 }
-/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxcreateprofile.htmlxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 .container {
   border-radius: 2px 2px 5px 5px;
-  padding: 10px 20px 20px 20px;
-  width: 90%;
+  padding: 33px 20px 20px 20px;
+  /*width: 90%;*/
   max-width: 320px;
   background: #ffffff;
   position: relative;
-  padding-bottom: 80px;
+  padding-bottom: 33px;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  opacity: 0.80
 }
+#userForm{
+  width: 225px
+}
+
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 .mealbox {
   border-radius: 2px 2px 5px 5px;
-  padding: 10px 20px 20px 20px;
+  padding: 33px 20px 20px 20px;
   width: 90%;
   max-width: 320px;
   background: #ffffff;
   position: relative;
-  padding-bottom: 80px;
+  padding-bottom: 33px;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0.80
+
 }
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 .datalog {
   border-radius: 2px 2px 5px 5px;
-  padding: 10px 20px 20px 20px;
+  padding: 33px 20px 20px 20px;
   width: 90%;
   max-width: 320px;
   background: #ffffff;
   position: relative;
-  padding-bottom: 80px;
+  padding-bottom: 33px;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  opacity: 0.80
+}
+/*-------------------------------------------------------------------------------------------*/
+#wrapper {
+  border-radius: 2px 2px 5px 5px;
+  padding: 33px 20px 20px 20px;
+  width: 90%;
+  max-width: 320px;
+  background: #ffffff;
+  position: relative;
+  padding-bottom: 33px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0.80
+}
+.btn-style {
+  width: 100%;
+
 }
 footer {
   display: block;
