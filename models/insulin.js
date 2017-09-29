@@ -1,28 +1,21 @@
-var Sequelize = require("sequelize");
-var sequelize = require("../config/connection.js");
-
-module.exports = function(){
+module.exports = function(sequelize, DataTypes){
     var insulin = sequelize.define("insulin",{
         
-        time: {
-            type: Sequelize.DATETIME
-        },
         units: {
-            type: Sequelize.FLOAT
+            type: DataTypes.INTEGER
         },
         kind: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
+        },
+        timeTaken: {
+            type: DataTypes.INTEGER
         }
     });
 
-    
     insulin.associate = function(models){
         insulin.belongsTo(models.userInfo, {
-            as: userName,
-            foreignKey: {
-                    allowNull: false
+             as: models.userInfo.userName,
 
-            }
         });
     };
     return insulin;

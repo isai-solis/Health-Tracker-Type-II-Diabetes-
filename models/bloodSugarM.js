@@ -1,28 +1,19 @@
-var Sequelize = require("sequelize");
-var sequelize = require("../config/connection.js");
-
- module.exports = function(){
-    var bloodSugarM = sequelize.define("bloodSuagrM",{
+module.exports = function(sequelize, DataTypes){
+   
+    var bloodSugarM = sequelize.define("bloodSugarM",{
     
         mgDl: {
-            type: Sequelize.INTEGER
+            type: DataTypes.INTEGER
         },
         timeOfM: {
-            type: Sequelize.DATETIME,
-            validate: {
-                isDate: true,
-                notNull: true
-            },
+            type: DataTypes.INTEGER,
         },
         
     });
 
     bloodSugarM.associate = function(models){
         bloodSugarM.belongsTo(models.userInfo, {
-            as: userName, 
-                foreignKey: {
-                    allowNull: false
-                }
+             as: models.userInfo.userName,
         });
     };
 

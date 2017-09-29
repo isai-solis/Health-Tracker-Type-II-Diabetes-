@@ -1,34 +1,28 @@
-var Sequelize = require("sequelize");
-var sequelize = require("../config/connection.js");
 
-module.exports = function(){
+module.exports = function(sequelize, DataTypes){
     var medications = sequelize.define("medications",{
-        
         brand: {
-            type: Sequelize.STRING,
+            type: DataTypes.STRING,
             validate: {
                 notNull: true
             }
         },
         frequency: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             validate: {
                 notNull: true
             }
         },
         dose: {
-            type: Sequelize.FLOAT,
-            validate: {
-                notNull: true
-            }
+            type: DataTypes.FLOAT(6,1),
         },
     });
     
     medications.associate = function(models){
         medications.belongsTo(models.userInfo, {
-            as: userName,
+             as: models.userInfo.userName,
             foreignKey: {
-                    allowNull: false
+                    // allowNull: false
             }
         });
     };

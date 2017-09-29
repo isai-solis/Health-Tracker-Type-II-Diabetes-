@@ -1,25 +1,20 @@
-var Sequelize = require("sequelize");
-var sequelize = require("../config/connection.js");
 
-module.exports = function(){
+module.exports = function(sequelize, DataTypes){
     var meals = sequelize.define("meals",{
-        time: {
-            type: Sequelize.DATETIME
-        },
         meal: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         carbs: {
-            type: Sequelize.INTEGER
+            type: DataTypes.INTEGER
+        },
+        timeEaten: {
+            type: DataTypes.INTEGER
         }
     });
 
     meals.associate = function(models){
         meals.belongsTo(models.userInfo, {
-            as: userName,
-                foreignKey: {
-                        allowNull: false
-                }
+             as: models.userInfo.userName,
         });
     };
     return meals;
@@ -27,3 +22,12 @@ module.exports = function(){
 
 
 
+
+
+
+// meals.associate = function(models){
+//         meals.belongsTo(models.userInfo, {
+//             targetKey: models.userInfo.id,
+//             constraints: false
+//         });
+//     };

@@ -5,82 +5,153 @@
   <meta charset="UTF-8">
   <title>Health Tracker</title>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/gif" href="animated_favicon1.gif">
 </head>
 
 <body>
-  <div id="meal-box">
-    <button id="meal-entry"> Meal Entry </button>
-    <div id= "meal-form" style="display:none">
-      <form>
-        Food:<br>
-        <input type="text" name="food" id="food"><br>
-        Carbs (g):<br>
-        <input type="number" name="quantity" id="carbs"><br>
-        Time: <br>
-        <input type="time" id="meal-time"><br>
-      </form>
-      <button id="meal-submit"> Submit </button>
-    </div>
-  </div>
-    
-  <div id="sugar-box">
-    <button id="sugar-entry"> Sugar Entry </button>
-    <div id= "sugar-form" style="display:none">
-      <form>
-        Glucose Level (mg/dl):<br>
-        <input type="number" name="quantity" id="glucose"><br>
-        Time: <br>
-        <input type="time" name="usr_time" id="glucose-time"><br>
-      </form>
-      <button id="sugar-submit"> Submit </button>
-    </div>
-  </div>
 
-  <div id="insulin-box">
-    <button id="insulin-entry"> Insulin Entry </button>
-    <div id= "insulin-form" style="display:none"> 
-      <form>
-        Type:
-        <input type="text" id="insulin-type"><br>
-        Units:
-        <input type="number" id="insulin-units">
-        Time: <br>
-        <input type="time" name="usr_time" id="glucose-time"><br>
-      </form>
-      <button id="insulin-submit"> Submit </button>
-    </div>
-  </div>
+  <nav class="navbar navbar-inverse bg-primary">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">C6H12O6</a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">My Results</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Log Out</a>
+        </li>
+      </ul>
 
-  <div id="activity-box">
-    <button id="activity-entry"> Activity Entry </button>
-    <div id= "activity-form" style="display:none">
-      <form>
-        Activity Type:
-        <select id="activity">
-          <option value="24"> Rest </option>
-          <option value="48"> Active </option>
-          <option value="week"> Light Exercise </option>
-          <option value="month"> Strenuous Exercise </option>
-          <option value="allTime">Last Year</option>
-        </select><br>
-        Energy Level:
-        <select id="mood">
-          <option value="low"> Low </option>
-          <option value="medium"> Medium </option>
-          <option value="high"> High </option>
-        </select><br>
-        Duration (minutes):
-        <input type="number" id="duration">
-        Time: <br>
-        <input type="time" name="usr_time" id="activity-time"><br>
-      </form>
-      <button id="activity-submit"> Submit </button>
+  <div id="wrapper">
+    <div id="meal-box">
+      <button id="meal-entry"> Meal Entry </button>
+      <div id= "meal-form" style="display:none">
+        <form>
+          Food:<br>
+          <input type="text" name="food" id="food"><br>
+          Carbs (g):<br>
+          <input type="number" name="quantity" id="carbs"><br>
+          Date: <br>
+          <input type="date" id="meal-date"><br>
+          Time: <br>
+          <input type="time" id="meal-time"><br>
+        </form>
+        <button id="meal-submit"> Submit </button>
+      </div>
+
+    </div>
+  </nav>
+  <div class="wrapper">
+
+
+
+    <div id="wrapper">
+
+      <div id="meal-box">
+        <button id="meal-entry" type="button" class="btn btn-info btn-style"> Meal Entry </button>
+        <div id="meal-form" style="display:none">
+          <form>
+            Food:<br>
+            <input type="text" name="food" id="food"><br> Carbs (g):<br>
+            <input type="number" name="quantity" id="carbs"><br> 
+            Date: <br>
+            <input type="date" name="usr_date" id="glucose-date"><br>
+            Time: <br>
+            <input type="time" name="usr_time" id="glucose-time"><br>
+          </form>
+          <br />
+          <button id="meal-submit"> Submit </button>
+        </div>
+      </div>
+<br />
+      <div id="sugar-box">
+        <button id="sugar-entry" button type="button" class="btn btn-primary btn-style"> Sugar Entry </button>
+        <div id="sugar-form" style="display:none">
+          <form>
+            Glucose Level (mg/dl):<br>
+            <input type="number" name="quantity" id="glucose"><br> 
+            Date: <br>
+            <input type="date" name="usr_date" id="insulin-date"><br>
+            Time: <br>
+            <input type="time" name="usr_time" id="insulin-time"><br>
+          </form>
+          <br />
+          <button id="sugar-submit"> Submit </button>
+        </div>
+
+      </div>
+      <br />
+      <div id="insulin-box">
+        <button id="insulin-entry" type="button" class="btn btn-info btn-style"> Insulin Entry </button>
+        <div id="insulin-form" style="display:none">
+          <form class="entry">
+            Type:
+            <br />
+            <input type="text" id="insulin-type"><br>
+
+             Units:
+             <br />
+            <input type="number" id="insulin-units">
+            <br />
+             Time: <br>
+            <input type="time" name="usr_time" id="glucose-time"><br>
+            <br />
+          </form>
+          <button id="insulin-submit"> Submit </button>
+        </div>
+      </div>
+<br />
+      <div id="activity-box">
+        <button id="activity-entry"button type="button" class="btn btn-primary btn-style"> Activity Entry </button>
+        <div id="activity-form" style="display:none">
+
+
+          <form class="entry">
+            Activity Type:
+            <br />
+            <select id="activity">
+
+          <option value="Rest"> Rest </option>
+          <option value="Active"> Active </option>
+          <option value="Light Excercise"> Light Exercise </option>
+          <option value="Strenuous Exercise"> Strenuous Exercise </option>
+
+
+
+        </select><br> Energy Level:
+        <br />
+            <select id="mood">
+          <option value="Low"> Low </option>
+          <option value="Medium"> Medium </option>
+          <option value="High"> High </option>
+        </select><br> 
+            Duration (minutes):
+            <input type="number" id="duration">
+            <br /> 
+            Date: <br>
+            <input type="date" name="usr_date" id="activity-date"><br>
+            Time: <br>
+            <input type="time" name="usr_time" id="activity-time"><br>
+          </form>
+          <br />
+          <button id="activity-submit"> Submit </button>
+        </div>
+      </div>
+      <script type="text/javascript" src="javascript/entry.js"></script>
     </div>
   </div>
-  <script type="text/javascript" src="javascript/entry.js"></script>
 </body>
+
 </html>

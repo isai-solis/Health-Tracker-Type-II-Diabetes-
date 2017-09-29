@@ -1,56 +1,55 @@
-var Sequelize = require("sequelize");
-var sequelize = require("../config/connection.js");
-
-module.exports = function(){
+module.exports = function(sequelize, DataTypes){
     var userInfo = sequelize.define("userInfo",{
         name: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
+        },
+        email: {
+            type: DataTypes.STRING
+        },
+        gender:{
+            type: DataTypes.STRING
         },
         birthDate: {
-            type: Sequelize.DATE
+            type: DataTypes.INTEGER
         },
         weight: {
-            type: Sequelize.INTEGER
+            type: DataTypes.INTEGER
         },
         height: {
-            type: Sequelize.INTEGER
+            type: DataTypes.INTEGER
         },
         userName: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         password: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         }
     });
 
-    userInfo.associate = function(){
+    userInfo.associate = function(models){
         userInfo.hasMany(models.activity, {
             onDelete: "cascade"
         });
-    };
-
-    userInfo.associate = function(models){
         userInfo.hasMany(models.bloodSugarM, {
             onDelete: "cascade"
         });
-    };
-
-    userInfo.associate = function(){
-        userInfo.hasMany(models.insulin, {
+         userInfo.hasMany(models.insulin, {
             onDelete: "cascade"
         });
-    };
-
-    userInfo.associate = function(){
         userInfo.hasMany(models.meals, {
-            onDelete: "cascade"
-        });
-    };
+            as: "meals",
+            foreignKey: models.userInfo_Id
 
-    userInfo.associate = function(){
-        userInfo.hasMany(models.medications, {
-            onDelete: "cascade"
+            // foreignKey: models.userInfo.Id,
+            // onDelete: "cascade"
         });
+        //  userInfo.hasMany(models.medications, {
+        //     onDelete: "cascade"
+        // });
+        //  userInfo.hasMany(models.A1C, {
+        //     onDelete: "cascade"
+        // });
+
     };
 
 return userInfo;

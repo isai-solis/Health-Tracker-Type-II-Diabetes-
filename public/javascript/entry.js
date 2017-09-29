@@ -1,7 +1,11 @@
-var user = sessionStorage.getItem('userName');
-// if (user == null){
-// 	redirect("/loginauth");
-// }
+// var user = sessionStorage.getItem('userName');
+var user = "jsmith";
+
+if (user == null){
+	console.log("you messed up");
+
+}
+
 console.log("user = " + user);
 
 //buttons for displaying each type of entry form
@@ -35,24 +39,16 @@ $("#meal-submit").on("click", function(){
 		userName: user,
 		food: $("#food").val(),
 		carbs: $("#carbs").val(),
-		time: $("#meal-time").val()
+		date: Date.parse($("#meal-date").val() + " " + $("#meal-time").val())
 	}
+	console.log("entry.js ------------------");
 	console.log(dataSubmit);
-	$.post(currentURL + "/api/meal", dataSubmit,
+	$.post("/api/meals", dataSubmit,
 		function(data){
-			if (data.logged){
-				logSuccess();
-				$("#food").val("");
-				$("#carbs").val("");
-				$("#meal-time").val("");
-				$("#meal-form").css("display", "none");
-			}
-			else{
-				logError();
-				$("#food").val("");
-				$("#carbs").val("");
-				$("#meal-time").val("");
-			}
+			$("#food").val("");
+			$("#carbs").val("");
+			$("#meal-time").val("");
+			$("#meal-form").css("display", "none");
 	});
 });
 
@@ -60,19 +56,18 @@ $("#sugar-submit").on("click", function(){
 	var dataSubmit = {
 		userName: user,
 		glucose: $("#glucose").val(),
-		time: $("#glucose-time").val()
+		time: Date.parse($("#glucose-date").val() + " " + $("#glucose-time").val())
 	}
 	console.log(dataSubmit);
-	$.post(currentURL + "/api/glucose", dataSubmit,
+	$.post("/api/glucose", dataSubmit,
 		function(data){
 			if (data.logged){
-				logSuccess();
 				$("#glucose").val("");
 				$("#glucose-time").val("");
 				$("#sugar-form").css("display", "none");
 			}
 			else{
-				logError();
+				
 				$("#glucose").val("");
 				$("#glucose-time").val("");
 			}
@@ -84,20 +79,20 @@ $("#insulin-submit").on("click", function(){
 		userName: user,
 		units: $("#insulin-units").val(),
 		type: $("#insulin-type").val(),
-		time: $("#insulin-time").val()
+		time: Date.parse($("#insulin-date").val() + " " + $("#insulin-time").val())
 	}
 	console.log(dataSubmit);
-	$.post(currentURL + "/api/insulin", dataSubmit,
+	$.post("/api/insulin", dataSubmit,
 		function(data){
 			if (data.logged){
-				logSuccess();
+			
 				$("#insulin-units").val("");
 				$("#insulin-type").val("");
 				$("insulin-time").val("");
 				$("#insulin-form").css("display", "none");
 			}
 			else{
-				logError();
+			
 				$("#insulin-units").val("");
 				$("#insulin-time").val("");
 				$("#insulin-type").val("");
@@ -111,13 +106,13 @@ $("#activity-submit").on("click", function(){
 		activity: $("#activity").val(),
 		mood: $("#mood").val(),
 		duration: $("#duration").val(), 
-		time: $("#activity-time").val()
+		time: Date.parse($("#activity-date").val() + " " + $("#activity-time").val())
 	}
 	console.log(dataSubmit);
-	$.post(currentURL + "/api/activity", dataSubmit,
+	$.post("/api/activity", dataSubmit,
 		function(data){
 			if (data.logged){
-				logSuccess();
+				
 				$("#activity").val("");
 				$("#mood").val("");
 				$("#duration").val("");
@@ -125,7 +120,7 @@ $("#activity-submit").on("click", function(){
 				$("#activity-form").css("display", "none");
 			}
 			else{
-				logError();
+				
 				$("#activity").val("");
 				$("#mood").val("");
 				$("#duration").val("");
