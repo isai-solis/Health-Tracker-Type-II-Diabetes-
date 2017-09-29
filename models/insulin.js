@@ -1,14 +1,14 @@
 module.exports = function(sequelize, DataTypes){
     var insulin = sequelize.define("insulin",{
         
-        timeTaken: {
-            type: DataTypes.INTEGER
-        },
         units: {
             type: DataTypes.INTEGER
         },
         kind: {
             type: DataTypes.STRING
+        },
+        timeTaken: {
+            type: DataTypes.INTEGER
         }
     });
 

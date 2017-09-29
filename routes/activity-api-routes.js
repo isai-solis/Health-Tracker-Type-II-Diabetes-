@@ -4,10 +4,10 @@ module.exports = function(app){
 
     app.post("/api/activity", function(req, res){
         db.activity.create({
-            activityTime: req.body.activity,
             level: req.body.activity,
+            howFeel: req.body.mood,
             timeDuration: req.body.duration,
-            howFeel: req.body.mood
+            activityTime: req.body.time,
         }).then(function(dbactivity){
             db.userInfo.find({where: {userName: req.body.userName}})
             .then(function(user) {

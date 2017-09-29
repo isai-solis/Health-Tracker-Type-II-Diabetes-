@@ -5,9 +5,9 @@ module.exports = function(app){
     // log a user's insulin dose and time measurement was taken 
     app.post("/api/insulin", function(req, res){
         db.insulin.create({
-            timeTaken: req.body.time,
             units: req.body.units,
             kind: req.body.type,
+            timeTaken: req.body.time
         }).then(function (dbinsulin) {
             console.log(dbinsulin)
             db.userInfo.find({where: {userName: req.body.userName}})
