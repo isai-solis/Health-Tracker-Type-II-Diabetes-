@@ -39,7 +39,7 @@ $("#meal-submit").on("click", function(){
 		userName: user,
 		food: $("#food").val(),
 		carbs: $("#carbs").val(),
-		date: $("#meal-date").val()
+		date: Date.parse($("#meal-date").val() + " " + $("#meal-time").val())
 	}
 	console.log("entry.js ------------------");
 	console.log(dataSubmit);
@@ -56,7 +56,7 @@ $("#sugar-submit").on("click", function(){
 	var dataSubmit = {
 		userName: user,
 		glucose: $("#glucose").val(),
-		time: $("#glucose-time").val()
+		time: Date.parse($("#glucose-date").val() + " " + $("#glucose-time").val())
 	}
 	console.log(dataSubmit);
 	$.post("/api/glucose", dataSubmit,
@@ -79,7 +79,7 @@ $("#insulin-submit").on("click", function(){
 		userName: user,
 		units: $("#insulin-units").val(),
 		type: $("#insulin-type").val(),
-		timeTaken: $("#insulin-time").val()
+		time: Date.parse($("#insulin-date").val() + " " + $("#insulin-time").val())
 	}
 	console.log(dataSubmit);
 	$.post("/api/insulin", dataSubmit,
@@ -106,7 +106,7 @@ $("#activity-submit").on("click", function(){
 		activity: $("#activity").val(),
 		mood: $("#mood").val(),
 		duration: $("#duration").val(), 
-		time: $("#activity-time").val()
+		time: Date.parse($("#activity-date").val() + " " + $("#activity-time").val())
 	}
 	console.log(dataSubmit);
 	$.post("/api/activity", dataSubmit,
