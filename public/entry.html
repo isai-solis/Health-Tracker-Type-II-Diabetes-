@@ -15,6 +15,7 @@
 </head>
 
 <body>
+
   <nav class="navbar navbar-inverse bg-primary">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -32,9 +33,28 @@
           <a class="nav-link" href="#">Log Out</a>
         </li>
       </ul>
+
+  <div id="wrapper">
+    <div id="meal-box">
+      <button id="meal-entry"> Meal Entry </button>
+      <div id= "meal-form" style="display:none">
+        <form>
+          Food:<br>
+          <input type="text" name="food" id="food"><br>
+          Carbs (g):<br>
+          <input type="number" name="quantity" id="carbs"><br>
+          Date: <br>
+          <input type="date" id="meal-date"><br>
+          Time: <br>
+          <input type="time" id="meal-time"><br>
+        </form>
+        <button id="meal-submit"> Submit </button>
+      </div>
+
     </div>
   </nav>
   <div class="wrapper">
+
 
 
     <div id="wrapper">
@@ -45,8 +65,11 @@
           <form>
             Food:<br>
             <input type="text" name="food" id="food"><br> Carbs (g):<br>
-            <input type="number" name="quantity" id="carbs"><br> Date / Time: <br>
-            <input type="date" id="meal-date"><br>
+            <input type="number" name="quantity" id="carbs"><br> 
+            Date: <br>
+            <input type="date" name="usr_date" id="glucose-date"><br>
+            Time: <br>
+            <input type="time" name="usr_time" id="glucose-time"><br>
           </form>
           <br />
           <button id="meal-submit"> Submit </button>
@@ -58,12 +81,16 @@
         <div id="sugar-form" style="display:none">
           <form>
             Glucose Level (mg/dl):<br>
-            <input type="number" name="quantity" id="glucose"><br> Time: <br>
-            <input type="time" name="usr_time" id="glucose-time"><br>
+            <input type="number" name="quantity" id="glucose"><br> 
+            Date: <br>
+            <input type="date" name="usr_date" id="insulin-date"><br>
+            Time: <br>
+            <input type="time" name="usr_time" id="insulin-time"><br>
           </form>
           <br />
           <button id="sugar-submit"> Submit </button>
         </div>
+
       </div>
       <br />
       <div id="insulin-box">
@@ -102,15 +129,20 @@
           <option value="Strenuous Exercise"> Strenuous Exercise </option>
 
 
+
         </select><br> Energy Level:
         <br />
             <select id="mood">
           <option value="Low"> Low </option>
           <option value="Medium"> Medium </option>
           <option value="High"> High </option>
-        </select><br> Duration (minutes):
+        </select><br> 
+            Duration (minutes):
             <input type="number" id="duration">
-            <br /> Time: <br>
+            <br /> 
+            Date: <br>
+            <input type="date" name="usr_date" id="activity-date"><br>
+            Time: <br>
             <input type="time" name="usr_time" id="activity-time"><br>
           </form>
           <br />

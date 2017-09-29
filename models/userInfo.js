@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING
         },
         birthDate: {
-            type: DataTypes.DATEONLY
+            type: DataTypes.INTEGER
         },
         weight: {
             type: DataTypes.INTEGER
@@ -37,14 +37,18 @@ module.exports = function(sequelize, DataTypes){
             onDelete: "cascade"
         });
         userInfo.hasMany(models.meals, {
-            onDelete: "cascade"
+            as: "meals",
+            foreignKey: models.userInfo_Id
+
+            // foreignKey: models.userInfo.Id,
+            // onDelete: "cascade"
         });
-         userInfo.hasMany(models.medications, {
-            onDelete: "cascade"
-        });
-         userInfo.hasMany(models.A1C, {
-            onDelete: "cascade"
-        });
+        //  userInfo.hasMany(models.medications, {
+        //     onDelete: "cascade"
+        // });
+        //  userInfo.hasMany(models.A1C, {
+        //     onDelete: "cascade"
+        // });
 
     };
 

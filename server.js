@@ -3,6 +3,8 @@ var bodyParser = require("body-parser");
 var app = express();
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
+var path = require('path');
+var seeds = require('./seeds.js');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -20,7 +22,10 @@ require("./routes/A1C-api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 
 db.sequelize.sync({ force: true }).then(function() {
+	seeds();
   app.listen(PORT, function() {
     console.log("Application listening on PORT " + PORT);
   });
 });
+
+
