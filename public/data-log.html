@@ -8,8 +8,8 @@
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 </head>
 
@@ -42,22 +42,17 @@
           <div id="query-bar">
             <form>
               <select id="data-type">
-					  	<option value="all">All</option>
 						  <option value="meals">Food</option>
 						  <option value="bloodSugarM">Blood Sugar</option>
 						  <option value="insulin">Insulin</option>
 						  <option value="activity">Activity</option>
 						</select>
-            <br />
-            <br />
-              <select id="time-frame">
-						  <option value="24">Last 24 Hrs</option>
-						  <option value="week">Last Week</option>
-						  <option value="month">Last Month</option>
-						  <option value="quarter">Last Quarter</option>
-						</select>
-            <br />
-            <br />
+              <br />
+              <div class="form-group">
+                <label for="exampleTextarea"></label>
+                <textarea class="form-control" id="exampleTextarea" rows="15"></textarea>
+              </div>
+              <br />
               <button id="query-submit" button type="button" class="btn btn-primary btn-style">Submit Query</button>
             </form>
             <div id="data-display">
