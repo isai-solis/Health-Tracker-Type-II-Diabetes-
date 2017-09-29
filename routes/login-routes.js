@@ -8,6 +8,7 @@ module.exports = function(app){
         }).then(function(dbuserInfo){
             console.log("database password: " + dbuserInfo.password)
             res.text(dbuserInfo);
+            res.redirect("/entry");
         });
     });
 };
