@@ -20,9 +20,10 @@ require("./routes/medications-api-routes.js")(app);
 require("./routes/userInfo-api-routes.js")(app);
 require("./routes/A1C-api-routes.js")(app);
 require("./routes/html-routes.js")(app);
+require("./routes/query-routes.js")(app);
 
 db.sequelize.sync({ force: true }).then(function() {
-	seeds();
+  seeds();
   app.listen(PORT, function() {
     console.log("Application listening on PORT " + PORT);
   });

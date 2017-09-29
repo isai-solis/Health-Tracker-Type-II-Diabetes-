@@ -9,7 +9,7 @@ $("#login-submit").on("click", function(){
 	}
 	//send entry to server for authentication
 	var currentURL = window.location.origin;
-	$.post(currentURL + "/api/loginauth", loginPair,
+	$.post("/api/loginauth", loginPair,
 	    function(data){
 
     if (!data.login){
