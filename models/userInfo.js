@@ -28,13 +28,16 @@ module.exports = function(sequelize, DataTypes){
 
     userInfo.associate = function(models){
         userInfo.hasMany(models.activity, {
-            onDelete: "cascade"
+            as: "activity",
+            foreignKey: models.userInfo_Id
         });
         userInfo.hasMany(models.bloodSugarM, {
-            onDelete: "cascade"
+            as: "bloodSugarM",
+            foreignKey: models.userInfo_Id
         });
          userInfo.hasMany(models.insulin, {
-            onDelete: "cascade"
+            as: "insulin",
+            foreignKey: models.userInfo_Id
         });
         userInfo.hasMany(models.meals, {
             as: "meals",
