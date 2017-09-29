@@ -14,5 +14,6 @@ $("#query-submit").on("click", function(){
 	$.post("/api/datalog", querySubmit,
 		function(data){
 			
+			console.log(data);
 	});
 });

@@ -22,17 +22,48 @@ module.exports = function(app){
             
 
             case "meals":
-                console
-                db.meals.findAll({})
-                .then(function (dbmeals) {
-                    db.userInfo.findAll({where: {userName: userName}})
-                    .then(function(userData){
-                        res.json(userData);
-                        console.log("MEALS DATA OOOOOOOOOOOOOOOOOOOOO");
-                        console.log(userData);
-                    })
-                });
                 
+                db.userInfo.findAll({
+                    where: {userName: userName},
+                    include: [{
+                        model: db.meals,
+                        as: "meals"
+                    }]
+                }).then(function(data){
+                    // res.JSON(data)
+                    console.log(data);
+                    console.log("MEALS DATA OOOOOOOOOOOOOOOOOOOOO");
+                    
+                });
+
+
+
+
+
+
+
+
+
+
+                // // db.meals.findAll({where: {userName: userName}})
+                // // .then(function (dbmeals) {
+                // db.userInfo.findAll({ 
+                //     where: { userName: userName },
+                //     attributes: ["userInfoId"]
+                // }).then(function(dbuserInfo){
+
+                //     db.meals.findAll({
+                //         where: {userName: dbuserInfo.userName}
+                //     }).then(function(meals){
+                //         res.json(meals);
+                //         console.log(meals);
+                //         meals.getMeals(dbuserInfo);
+                //     });
+                    
+                //     console.log("MEALS DATA OOOOOOOOOOOOOOOOOOOOO");
+                    
+                // });
+        
                 break;
 
             case "insulin":
